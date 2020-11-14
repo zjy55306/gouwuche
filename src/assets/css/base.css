@@ -1,0 +1,69 @@
+@import "normalize.css";
+/*选择到根标签HTML*/
+:root{
+  /* --color-text 是定义变量方法*/
+  --color-text:#666;
+ /*
+ --color-text使用方法
+ color: var(--color-text);
+ */
+
+  /*高亮*/
+  --height-light:#ff5757;
+
+/*整体背景颜色,导航等位置等*/
+  --high-tint:#ff8189;
+
+  /*  */
+  --color-background:#fff;
+
+  --font-size:14px;
+
+  --line-height:1.5;
+}
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Helvetica Neue', Helvetica,'微软雅黑','PingFang sc','Hiragino Sans GB','Microsoft YaHei',Arial,SansSerif;
+  user-select: none;/*禁止用户选择文字*/
+
+  /* 苹果Safari引擎,tab点击,highlight高亮*/
+  -webkit-tab-highlight-color:transparent;
+
+  color: var(--color-text);
+  width: 100vw;
+}
+
+a{
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.clear-fix::after{
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix{
+  /*IE专属,内容缩放的相关(倍数)*/
+  zoom: 1;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
